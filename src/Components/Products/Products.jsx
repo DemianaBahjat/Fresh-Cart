@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import Product from '../Product/Product';
 import { useQuery } from 'react-query';
+import { Helmet } from 'react-helmet';
 
 
 export default function Products() {
@@ -23,6 +24,10 @@ export default function Products() {
 
 
   return <>
+   <Helmet>
+                <meta charSet="utf-8" />
+                <title>Fresh Cart | Products</title>
+            </Helmet>
       <button onClick={refetch}> Refetch</button>
     <div className="row">
       {data?.data?.data.map((product) => {

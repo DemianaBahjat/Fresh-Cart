@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -52,7 +53,11 @@ export default function Orders() {
   })
 
 
-  return <>
+  return  <>
+           <Helmet>
+                <meta charSet="utf-8" />
+                <title> FreshCart | address</title>
+            </Helmet>
     <div className="w-75 m-auto my-5">
       <h1>Address :</h1>
       <form onSubmit={handleSubmit}>

@@ -48,15 +48,15 @@ export default function ProductDetails() {
 
                 :
                 <div className='row align-items-center py-5' >
+                    
                     <div className="col-md-3">
-
                         <Slider {...settings} >
                             {productDetails.images?.map((img, index) => {
                                 return <img key={index} src={img} className='w-100' alt="" />
                             })}
                         </Slider>
-
                     </div>
+
                     <div className="col-md-9">
                         <h2 className='mt-2'>{productDetails?.title}</h2>
                         <h5 className='font-sm text-main mt-2'>{productDetails?.category?.name}</h5>
@@ -69,7 +69,6 @@ export default function ProductDetails() {
                             </span>
                         </p>
                         <button  className='btn bg-main text-white w-100 mt-2'>Add To Cart</button>
-
                     </div>
 
                 </div>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import CategoriesSlider from '../CategoriesSlider/CategoriesSlider';
 import MainSlider from '../MainSlider/MainSlider';
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
 
@@ -19,7 +20,11 @@ export default function Home() {
   }, [])
 
   return <>
-  <MainSlider/>
+   <Helmet>
+                <meta charSet="utf-8" />
+                <title>Fresh Cart | Home</title>
+            </Helmet>
+    <MainSlider/>
     <CategoriesSlider />
     <div className="row">
       {products.map((product) => {

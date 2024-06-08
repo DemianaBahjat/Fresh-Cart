@@ -4,6 +4,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Loading from './../Loading/Loading';
+import { Helmet } from 'react-helmet'
 
 export default function Orders() {
   const [order, setOrder]= useState([])
@@ -23,6 +24,10 @@ export default function Orders() {
   }, [])
   return (
     <>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Fresh Cart | Order</title>
+            </Helmet>
       {loading? <Loading/> : null}
       <h1>Your Orders :</h1>
       {order.map( (order) => {

@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
-
 export default function Register() {
 
   const [errorMsg, setErrorMsg] = useState('')

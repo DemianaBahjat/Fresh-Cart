@@ -16,7 +16,7 @@ export default function Categories() {
   return (
     <>
     <Helmet>
-  <title>Categories</title>
+      <title> Fresh Cat | Categories</title>
   </Helmet>
     <div className="container py-3">
     {isLoading? <Loading/> : null}

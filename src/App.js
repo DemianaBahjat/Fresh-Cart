@@ -1,4 +1,4 @@
-import { Navigate, RouterProvider, createHashRouter } from 'react-router-dom';
+import { Navigate, RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
 import './App.css';
 import Register from './Components/Register/Register';
 import Layout from './Components/Layout/Layout';
@@ -24,16 +24,12 @@ import { store } from './Redux/store';
 
 
 
-
-
-
-
 const queryClient= new QueryClient();
-
 
 function App() {
 
-  const router = createHashRouter([
+
+  const router = createBrowserRouter([
     {
       path: '', element: <Layout />, children: [
         { path: '', element: <Navigate to={'home'} /> },
@@ -58,22 +54,22 @@ function App() {
 
 
   return <>
-   
-    <Provider store={store}>
+   <Provider store={store}>
     <QueryClientProvider client={queryClient}>
     <AuthContextProvider>
-      <CartContextProvider>
+       <CartContextProvider>
       <RouterProvider router={router}></RouterProvider>
-      </CartContextProvider>
-    </AuthContextProvider>
-    <ReactQueryDevtools position='bottom-left' />
-    </QueryClientProvider>
-
-    </Provider>
-    
-    <ToastContainer />
+       </CartContextProvider>
+     </AuthContextProvider>
+     <ReactQueryDevtools position='bottom-left' />
+     </QueryClientProvider>
+     </Provider>
+     <ToastContainer />
 
   </>
-}
+ }
 
 export default App;
+
+
+

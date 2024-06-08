@@ -16,9 +16,9 @@ export default function Brands() {
 
   return (
     <>
-    <Helmet>
-  <title>Brands</title>
-  </Helmet>
+     <Helmet>
+      <title> Fresh Cat | Brands</title>
+    </Helmet>
     <div className="container py-3"> 
     {isLoading? <Loading/> : null}
       <h2 className=' text-center text-main mb-4 fw-bolder h1'>All Brands</h2>

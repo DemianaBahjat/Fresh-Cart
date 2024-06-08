@@ -6,6 +6,7 @@ import { Link} from 'react-router-dom';
 import { CartContext } from '../../Contexts/CartContext';
 import { useQuery } from 'react-query';
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -133,6 +134,10 @@ export default function Cart() {
   }
 
   return <> 
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Fresh Cart | Cart</title>
+            </Helmet>
   {isLoading ? <Loading/> : <h2> no product in your cart </h2>}
     {cart.data?.products.length > 0 ?
 
